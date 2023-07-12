@@ -3,7 +3,7 @@
 
 local QBCore = exports['qb-core']:GetCoreObject()
 
-RegisterNetEvent("qb-policejob:client:UsePolicePouch", function(ItemData)
+RegisterNetEvent("ns-pdpouch:client:UsePolicePouch", function(ItemData)
     RequestAnimDict('mp_arresting')
       while (not HasAnimDictLoaded('mp_arresting')) do
       Wait(0)
@@ -69,7 +69,7 @@ RegisterNetEvent('takepouchitems', function(data)
             { type = "slider", label = "Amount", default = 1, max = 5 }
         })
         if input[1] then
-            TriggerServerEvent("qb-policejob:server:RemovePouchStuff",data.itemtype, input[1])
+            TriggerServerEvent("ns-pdpouch:server:RemovePouchStuff",data.itemtype, input[1])
         end
 end)
 
