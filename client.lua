@@ -27,15 +27,6 @@ RegisterNetEvent("ns-pdpouch:client:UsePolicePouch", function(ItemData)
             mouse = true
         },
     }) then 
-        local pouchData = ItemData
-  --[[      local input = lib.inputDialog('Police Pouch', {
-            { type = 'select', label = 'Select Item', options = {
-                { value = 'gsr', label = 'GSR Test Kit. (Left : '..ItemData.info.gsr.. ")" },
-                { value = 'dna', label = 'DNA Kit (Left : '..ItemData.info.dna.. ")" },
-                { value = 'drug', label = 'Drug Test Kit (Left : '..ItemData.info.drug.. ")"},
-            }},
-            { type = "number", label = "Amount", default = 1, max = 5 }
-        })]]
         local pouchoptions = {}
         for k, v in pairs(Config.PouchItems) do
             pouchoptions[#pouchoptions+1] = {
